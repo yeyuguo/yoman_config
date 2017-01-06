@@ -1,0 +1,60 @@
+/* ------ 注释模板 --- start ------ */
+/* ------ 注释模板 ---  end  ------ */
+html,body{
+    height: 100%;
+    width: 100%;
+}
+/* ------ 公共部分 --- start ------ */
+@gray: #222;
+@lg:#ddd;
+.full{
+    width: 100%;
+    height: 100%;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.wh(@width:100%;@heigh:100%){
+    width: @width;
+    height: @heigh;
+}
+.center{
+    text-align: center;
+}
+/* ------ 公共部分 ---  end  ------ */
+.content{
+    .full;
+}
+
+
+/* ------ stage --- start ------ */
+.stage{
+    .relative;
+    .wh(100%,680px);
+}
+/* ------ stage ---  end  ------ */
+
+
+/* ------ image --- start ------ */
+.img-sec{
+    .relative;
+    .full;
+    overflow: hidden;
+    background: @lg;
+}
+/* ------ image ---  end  ------ */
+
+
+/* ------ controller --- start ------ */
+.controller-nav{
+    .absolute;
+    left:0;
+    bottom:30px;
+    z-index:101;
+    width: 100%;
+    text-align: center;
+}
+/* ------ controller ---  end  ------ */
