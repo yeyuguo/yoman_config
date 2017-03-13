@@ -123,8 +123,10 @@ var PicApp = React.createClass({
                 }
             }
             // TODO 这里的this 不太明白用意
-            imgFigures.push(<ImgFigure data={value} ref={'imgFigure'+index} />).bind(this)
-        })
+            imgFigures.push(<ImgFigure data={value} ref={'imgFigure'+index} />)
+
+        }.bind(this)) // 这里的 this 是为了把 this.state 传入forEach回调函数里
+
         return (
             <section className='stage' ref='stage'>
                 <section className="img-sec">
